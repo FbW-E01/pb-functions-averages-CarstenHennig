@@ -76,15 +76,10 @@ calculateGolfAverages();
 console.log("This is arraySum: " + arraySum);
 0;
 function calculateTotalAverages() {
-  let godKnowsThisIsFinalResult = 0;
   for (var i = 0; i < arraySum.length; i++) {
-    godKnowsThisIsFinalResult =
-      godKnowsThisIsFinalResult + parseFloat(arraySum[i]);
-    console.log(godKnowsThisIsFinalResult.toFixed(2));
-    console.log(
-      "The average of averages is " +
-        (godKnowsThisIsFinalResult / arraySum.length).toFixed(2)
-    );
+    console.log("This is arraySum: " + arraySum[i]);
+    let arrayResult = (arraySum[i] + arraySum.length) / arraySum.length;
+    console.log("This is the arrayResult: " + arrayResult.toFixed(2));
   }
 }
 

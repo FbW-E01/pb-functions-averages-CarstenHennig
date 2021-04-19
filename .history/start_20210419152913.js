@@ -78,12 +78,11 @@ console.log("This is arraySum: " + arraySum);
 function calculateTotalAverages() {
   let godKnowsThisIsFinalResult = 0;
   for (var i = 0; i < arraySum.length; i++) {
-    godKnowsThisIsFinalResult =
-      godKnowsThisIsFinalResult + parseFloat(arraySum[i]);
-    console.log(godKnowsThisIsFinalResult.toFixed(2));
+    godKnowsThisIsFinalResult = godKnowsThisIsFinalResult.concat(arraySum[i]);
+    console.log(godKnowsThisIsFinalResult);
     console.log(
       "The average of averages is " +
-        (godKnowsThisIsFinalResult / arraySum.length).toFixed(2)
+        godKnowsThisIsFinalResult / arraySum.length.toFixed(2)
     );
   }
 }

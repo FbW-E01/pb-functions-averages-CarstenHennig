@@ -1,10 +1,8 @@
 /**
  * 1. Declare two functions: calculateGolfAverages and calculateTotalAverages
  */
-// function calculateGolfAverages() {
-//   for
-// }
-// function calculateTotalAverages() {}
+function calculateGolfAverages() {}
+function calculateTotalAverages() {}
 
 /**
  * 2. Implement calculateGolfAverages
@@ -43,49 +41,10 @@ const golfScores = [
   [0, 1, 1, 0, 2, 1, -1, 1, 4, 2, 1, 1, 0, 2, -1, 1, 0, 0],
 ];
 
-let arraySum = [];
-
 function calculateGolfAverages() {
   for (var i = 0; i < golfScores.length; i++) {
-    let result = golfScores[i];
-    // console.log(result);
-    let roundSum = 0;
-
-    for (var j = 0; j < result.length; j++) {
-      roundSum = roundSum + result[j];
-
-      // let resultAverage = (result[j] + result.length) / result.length;
-      // console.log("This is the sum: " + result[j] + result.length);
-      // console.log(
-      //   "The average score of round " + j + " is: " + resultAverage.toFixed(2)
-      // );
-      // arraySum.push(resultAverage.toFixed(2));
-    }
-    console.log(
-      "This average score for round " +
-        i +
-        " is: " +
-        (roundSum / result.length).toFixed(2)
-    );
-    arraySum.push((roundSum / result.length).toFixed(2));
+    console.log((golfScores[i] / golfScores.length) * golfScores.length);
   }
 }
 
 calculateGolfAverages();
-
-console.log("This is arraySum: " + arraySum);
-0;
-function calculateTotalAverages() {
-  let godKnowsThisIsFinalResult = 0;
-  for (var i = 0; i < arraySum.length; i++) {
-    godKnowsThisIsFinalResult =
-      godKnowsThisIsFinalResult + parseFloat(arraySum[i]);
-    console.log(godKnowsThisIsFinalResult.toFixed(2));
-    console.log(
-      "The average of averages is " +
-        (godKnowsThisIsFinalResult / arraySum.length).toFixed(2)
-    );
-  }
-}
-
-calculateTotalAverages();

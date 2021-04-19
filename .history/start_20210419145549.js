@@ -48,43 +48,26 @@ let arraySum = [];
 function calculateGolfAverages() {
   for (var i = 0; i < golfScores.length; i++) {
     let result = golfScores[i];
-    // console.log(result);
-    let roundSum = 0;
-
+    console.log(result);
     for (var j = 0; j < result.length; j++) {
-      roundSum = roundSum + result[j];
-
-      // let resultAverage = (result[j] + result.length) / result.length;
-      // console.log("This is the sum: " + result[j] + result.length);
-      // console.log(
-      //   "The average score of round " + j + " is: " + resultAverage.toFixed(2)
-      // );
-      // arraySum.push(resultAverage.toFixed(2));
+      let resultAverage = (result[j] + result.length) / result.length;
+      console.log(
+        "The average score of round " + j + " is: " + resultAverage.toFixed(2)
+      );
+      arraySum.push(resultAverage.toFixed(2));
     }
-    console.log(
-      "This average score for round " +
-        i +
-        " is: " +
-        (roundSum / result.length).toFixed(2)
-    );
-    arraySum.push((roundSum / result.length).toFixed(2));
   }
 }
 
 calculateGolfAverages();
 
-console.log("This is arraySum: " + arraySum);
-0;
+// console.log("This is arraySum: " + arraySum);
+
 function calculateTotalAverages() {
-  let godKnowsThisIsFinalResult = 0;
   for (var i = 0; i < arraySum.length; i++) {
-    godKnowsThisIsFinalResult =
-      godKnowsThisIsFinalResult + parseFloat(arraySum[i]);
-    console.log(godKnowsThisIsFinalResult.toFixed(2));
-    console.log(
-      "The average of averages is " +
-        (godKnowsThisIsFinalResult / arraySum.length).toFixed(2)
-    );
+    //    console.log("This is arraySum: " + arraySum[i]);
+    let arrayResult = (arraySum[i] + arraySum.length) / arraySum.length;
+    console.log("This is the arrayResult: " + arrayResult.toFixed(2));
   }
 }
 
